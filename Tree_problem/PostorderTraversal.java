@@ -12,16 +12,16 @@ class TreeNode {
     }
 }
 
-public class InorderTraversal {
+public class PostorderTraversal {
 
-    static void inorder(TreeNode root, List<Integer> res) {
+    static void postorder(TreeNode root, List<Integer> res) {
         if (root == null) {
             return;
         }
 
-        inorder(root.left, res);  
-        res.add(root.val);         
-        inorder(root.right, res);  
+        postorder(root.left, res);  
+        postorder(root.right, res); 
+        res.add(root.val);          
     }
 
     public static void main(String[] args) {
@@ -31,9 +31,9 @@ public class InorderTraversal {
         root.right.left = new TreeNode(3);
 
         List<Integer> res = new ArrayList<>();
-        inorder(root, res);
+        postorder(root, res);
 
-        System.out.println("Inorder Traversal:");
+        System.out.println("Postorder Traversal:");
         System.out.println(res);
     }
 }

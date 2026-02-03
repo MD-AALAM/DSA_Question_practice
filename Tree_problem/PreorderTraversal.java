@@ -19,19 +19,12 @@ public class PreorderTraversal {
             return;
         }
 
-        res.add(root.val);        // Root
-        preorder(root.left, res); // Left
-        preorder(root.right, res);// Right
+        res.add(root.val);        
+        preorder(root.left, res); 
+        preorder(root.right, res);
     }
 
     public static void main(String[] args) {
-
-        // Creating the tree
-        //       1
-        //        \
-        //         2
-        //        /
-        //       3
 
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
