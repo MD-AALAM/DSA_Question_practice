@@ -1,6 +1,5 @@
 import java.util.*;
 
-// Definition for Binary Tree Node
 class TreeNode {
     int val;
     TreeNode left;
